@@ -1,5 +1,5 @@
 let input = document.getElementById("searchBar");
-
+//main pull method
 function getData(lookup){
     $.ajax({
     type:"GET",
@@ -10,7 +10,7 @@ function getData(lookup){
         let para = document.getElementById("songList");
         $(para).empty();
         for( let x in a){
-            para.innerHTML += "<img src="+a[x].artworkUrl30+"> " +  "Artist: " + a[x].artistName + "  Album: "+a[x].collectionCensoredName+ "<br>  Track: " + "<a href="+ a[x].previewUrl+" target=\"_blank\">" + a[x].trackName + "</a><br>";
+            para.innerHTML += "<img src="+a[x].artworkUrl30+"> " +  "Artist: " + a[x].artistName + "    Album: "+a[x].collectionCensoredName+ "<br>  Track: " + "<a href="+ a[x].previewUrl+" target=\"_blank\">" + a[x].trackName + "</a><br>";
         
        }
     }
@@ -31,9 +31,12 @@ function enterSearch(event){
 }
 
 document.getElementById("submitButton").addEventListener("click", search());
+
 input.addEventListener("keyup", function(event){
     event.preventDefault();
     if (event.keyCode === 13) {
         document.getElementById("submitButton").click();
     }
 });
+
+
