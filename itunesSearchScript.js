@@ -10,8 +10,8 @@ function getData(lookup){
         let para = document.getElementById("songList");
         $(para).empty();
         for( let x in a){
-            para.innerHTML += "<img src="+a[x].artworkUrl30+"> " +  "Artist: " + a[x].artistName + "    Album: "+a[x].collectionCensoredName+ "<br>  Track: " + "<a href="+ a[x].previewUrl+" target=\"_blank\">" + a[x].trackName + "</a><br>";
-        
+            para.innerHTML += "<img src="+a[x].artworkUrl30+"> " +  "Artist: " + a[x].artistName + "    Album: "+a[x].collectionCensoredName+ "<br>  Track Preview:  " + "<a href="+ a[x].previewUrl+" target=\"_blank\">" + a[x].trackName + "</a><br><hr><br>";
+            
        }
     }
     });
